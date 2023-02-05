@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Technik Combat</title>
+	<link rel="stylesheet" href="style.css?v=1">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<main>
+		<div id="container">
+			<h6 class="builddata">Technik Combat {Pre-Alpha Release: v0.0.2.3}</h6>
+			<div id="stats">
+				<div id="playerName1" class="playerName"></div>
+				<div id="playerName2" class="playerName"></div>
+				<div id="icon1" class="icon">
+					<div class="combo" id="playerCombo"></div>
+				</div>
+				<div id="pH">
+					<div id = "playerHp"></div>
+					<div id = "pP">
+						<div id = "playerPower"></div>
+					</div>
+				</div>
+				<div id="timer"></div>
+				<div class="playerscorerow">
+					<div class="score"><div id="score1"></div></div>
+					<div class="score"><div id="score2"></div></div>
+					</div>
+				<div class="enemyscorerow">
+					<div class="score"><div id="score3"></div></div>
+					<div class="score"><div id="score4"></div></div>
+						</div>
+				<div id="eH">	
+					<div id = "enemyHp"></div>
+					<div id = "eP">
+						<div id = "enemyPower"></div>
+					</div>
+				</div>
+				<div id="icon2" class="icon">
+					<div class="combo" id="enemyCombo"></div>
+				</div>	
+			</div>
+			<div id="messages"></div>
+
+			<canvas></canvas>
+			<div id="pauseScreen"></div>
+			
+			<input type="range" id="musicVolume">
+		</div>
+	</main>
+	<script src="bin/functions/pause.js"></script>
+	<script src="bin/libs/gsap.js"></script>
+	<script src="bin/functions/sounds_music.js"></script>
+	<script src="bin/classes/Sprite.js" defer></script>
+	<script src="bin/classes/Fighter.js" defer></script>
+	<script src="bin/classes/Sprite2.js" defer></script>
+	<script src="bin/classes/Fighter2.js" defer></script>
+	<script src="bin/functions/calculations.js"></script>
+	<script src="bin/functions/time_game.js" defer></script>
+	<script src="bin/functions/animation.js"></script>
+	<script src="TechnikCombat.js" defer></script>
+</body>
+</html>

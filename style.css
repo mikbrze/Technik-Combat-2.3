@@ -1,0 +1,313 @@
+@font-face {
+	font-family: LoudnoiseBlack;
+	src: url("assets/misc/font/LoudnoiseBlack.ttf");
+	format: (truetype);
+}
+
+* {
+	box-sizing: border-box;
+	font-family: LoudnoiseBlack;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: LoudnoiseBlack;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background-image: url('assets/gui/prism.png');
+}
+
+main {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+}
+
+#container {
+	margin-top: 10vh;
+	border: 4px solid lightgrey;
+	display: inline-block;
+	position: relative;
+	text-align: right;
+}
+
+#stats {
+	padding-top: 10px;
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: fit-content;
+	align-items: center;
+}
+
+#pH {
+	display: flex;
+	justify-content: left;
+	position: relative;
+	top: -10px;
+	width: 508px;
+	max-width: 508px;
+	background-color: rgb(139,139,139);
+	background: linear-gradient(180deg, rgba(139,139,139,1) 0%, rgba(170,170,170,1) 24%, rgba(121,121,121,1) 46%, rgba(62,62,62,1) 75%, rgba(0,0,0,1) 100%);
+	border-image: linear-gradient(180deg, rgba(167,167,167,1) 25%, rgba(110,110,110,1) 75%) 5;
+	border-width: 6px;
+	border-style: solid;
+	border-radius: 15%;
+	height: 36px;
+}
+
+#eH {
+	display: flex;
+	justify-content: right;
+	position: relative;
+	top: -10px;
+	width: 508px;
+	max-width: 508px;
+	background-color: rgb(139,139,139);
+	background: linear-gradient(180deg, rgba(139,139,139,1) 0%, rgba(170,170,170,1) 24%, rgba(121,121,121,1) 46%, rgba(62,62,62,1) 75%, rgba(0,0,0,1) 100%);
+	border-image: linear-gradient(180deg, rgba(167,167,167,1) 25%, rgba(110,110,110,1) 75%) 5;
+	border-width: 6px;
+	border-style: solid;
+	border-radius: 15%;
+	height: 36px;
+	
+}
+
+#playerHp { 
+	position: inherit;
+	flex-shrink: 0;
+	top: 4px;
+	background: rgb(200,200,200);
+	background: linear-gradient(180deg, rgba(200,200,200,1) 0%, rgba(255,250,222,1) 15%, rgba(253,218,0,1) 40%, rgba(255,147,0,1) 75%, rgba(126,60,0,1) 100%); 
+	top: 0px;
+	left: 0px;
+	right: 20px;
+	max-width: 502px;
+	height: 25px;
+	border: 2px solid black;
+}
+
+#enemyHp {
+	position: inherit;
+	flex-shrink: 0;
+	top: 0px;
+	left: 0px;
+	right: 20px;
+	background: rgb(200,200,200);
+	background: linear-gradient(180deg, rgba(200,200,200,1) 0%, rgba(255,250,222,1) 15%, rgba(253,218,0,1) 40%, rgba(255,147,0,1) 75%, rgba(126,60,0,1) 100%); 
+	max-width: 502px;
+	height: 25px;
+	border: 2px solid black;
+}
+
+#pP { 
+	top: 40px;
+	left: 5px;
+	position: absolute;
+	background-color: gray;
+	height: 20px;
+	width: 300px;
+	display: none;
+}
+
+#eP {
+	top: 40px;
+	right: 5px;
+	position: absolute;
+	background-color: gray;
+	height: 20px;
+	width: 300px;
+	display: none;
+}
+
+#playerPower{ 
+	position: absolute;
+	background-color: gold;
+	height: 20px;
+	width: 300px;
+	display: none;
+}
+
+#enemyPower {
+	position: absolute;
+	background-color: gold;
+	height: 20px;
+	width: 300px;
+	display: none;
+}
+.playerscorerow {
+	gap: 5px;
+	display: flex;
+	position: inherit;
+	left: 578px;
+	top: 98px;
+}
+.enemyscorerow {
+	gap: 5px;
+	display: flex;
+	position: inherit;
+	left: 732px;
+	top: 98px;
+}
+.score {
+	position: relative;
+	background: rgb(200,200,200);
+	background: linear-gradient(180deg, rgba(167,167,167,1) 25%, rgba(110,110,110,1) 75%) 5;
+	height: 26px;
+	text-align: center;
+	z-index: 29;
+	font-size: 20px;
+	color: blue;
+	text-align: center;
+	border-radius: 45%
+}
+#score1, #score2, #score3, #score4{
+	position: relative;
+	margin: 4px;
+	background: rgb(200,200,200);
+	background: linear-gradient(180deg, rgba(200,200,200,1) 0%, rgba(255,250,222,1) 15%, rgba(253,218,0,1) 40%, rgba(255,147,0,1) 75%, rgba(126,60,0,1) 100%); 
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	z-index: 29;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 45%;
+	display: none;
+}
+.icon {
+	flex-shrink: 0;
+	position: relative;
+	top: 0px;
+	width: 125px;
+	height: 125px;
+	clear: both;
+}
+#icon2 {
+	-webkit-box-shadow: inset 0px 0px 53px 58px rgba(0,13,255,0.59);
+	-moz-box-shadow: inset 0px 0px 53px 58px rgba(0,13,255,0.59);
+	box-shadow: inset 0px 0px 53px 58px rgba(0,13,255,0.59);
+	border-radius: 10%;
+	right: 1px;
+}
+#icon1 {
+	-webkit-box-shadow: inset 0px 0px 53px 58px rgba(255,0,0,0.59);
+	-moz-box-shadow: inset 0px 0px 53px 58px rgba(255,0,0,0.59);
+	box-shadow: inset 0px 0px 53px 58px rgba(255,0,0,0.59);
+	border-radius: 10%;
+}
+#playerCombo {
+	font-style: italic;
+	top: 275px;
+	left: 25px;
+	position: absolute;
+	justify-content: left;
+	display: flex;
+	font-size: 25px;
+	color: gainsboro;
+	text-shadow: 3px 3px 3px black;
+	width: 250px;
+}
+#enemyCombo {
+	font-style: italic;
+	top: 275px;
+	right: 25px;
+	justify-content: right;
+	position: absolute;
+	display: flex;
+	font-size: 25px;
+	color: gainsboro;
+	text-shadow: 3px 3px 3px black;
+	width: 250px;
+}
+.builddata {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-style: italic;
+	z-index: 10;
+	display: flex;
+	position: absolute;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+	left: 1%;
+	top: 92%
+}
+
+.playerName{
+    font-style: italic;
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-kerning: auto;
+    position: inherit;
+    text-shadow: 3px 3px 3px black;
+    color: whitesmoke;
+    display: block;
+    width: 400px;
+    height: 40px;
+    top: 85px;
+}
+
+#playerName1 {
+    text-align: left;
+    left: 135px;
+}
+
+#playerName2 {
+    text-align: right;
+    right: 135px;
+}
+
+#timer {
+	top: -10px;
+    flex-shrink: 0;
+	font-style: italic;
+    font-size: 76px;
+    text-shadow: 3px 4px 5px black;
+	color: whitesmoke;
+    width: 125px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	left: -2px;
+	position: relative;
+	top: -16px;
+}
+
+#messages {
+	position: absolute;
+	color: ghostwhite;
+	font-size: 58px;
+	text-shadow: 3px 3px 3px black;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	z-index: 30;
+}
+
+#musicVolume{
+	position: absolute;
+	width: 200px;
+	left: 125px;
+	top: 10px;
+	z-index: 100;
+	display: none;
+}
+
+#pauseScreen{
+	position: absolute;
+	top: 0px;
+	width: 1366px;
+	height: 768px;
+	background-color: rgba(0,0,0,0.4);
+	display: none;
+	z-index: 10;
+}
